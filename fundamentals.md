@@ -196,3 +196,40 @@
 - Eventual Consistency
   - reads might return a view of the system that is stale
   - guarantees that the state of the database will eventually reflect writes within a time period
+
+### Key Value Store
+- Key-Value Store
+  - flexible NoSQL database that's often used for caching and dynamic configuration
+  - DynamoDB, Etcd, Redis and ZooKeeper
+
+### Specialized Storage Pardigms
+- Blob Storage
+  - key-value store but usually blob stores have different guarantees
+  - value can be megabytes large or larger
+  - to store usually large binaries, database snapshots, or images
+  - e.g. GCS S3
+- Time Series Database
+  - for storing and analyzing time-indexed data
+  - data points that specifically occur at a given moment in time
+  - e.g. InfluxDB, Prometheus, Graphite
+- Graph Database
+  - defined relationships
+  - take advantage of the underlying graph structure to perform complex queries on deeply connected data very fast
+  - e.g. neo4j
+- Cypher
+  - graphql query language developed for Neo4j graph database
+  - SQL for graphs
+- Spatial Database
+  - optimized for storing and querying spatial data like locations on a map
+  - rely on spatial indexes like quadtrees to quickly perform spatial queries like finding all locations in the vicinity of a region
+- Quadtree
+  - used to index two-dimensional spatial data
+  - each node has either zero or 4 children nodes
+  - contain some form of spatial data - locations - with a maximum capacity of some specified number n
+  - the root node represents the entired world, outermost rectangle
+  - if the entire world has more than n locations, the outermost rectangle is divided into 4 quadrants each representing a region of the world
+  - so long as a region has more than n locations, its corresponding rectangle is subdivided into 4 quadrants
+  - regions have fewer than n locations are undivided rectangles (leaf nodes)
+  - have many subdivided rectangles represent densely populated areas
+  - have few subdivided rectangles represent sparsely populated areas
+  - find a location - extremely fast - runs in log4(x) 
