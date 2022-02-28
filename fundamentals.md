@@ -153,3 +153,46 @@
   - can happen if sharding key or hashing function are suboptimal
   - some servers receive a lot more traffic than others
 - Nginx
+
+### Hashing
+- consisten hashing
+ - minimizes the number of keys that need to be remapped when a hash table gets resized
+ - often used by load balancers to distribute traffic to servers
+ - minimizes the number of requests that get forwarded to different servers when new servers are added or when existing servers are brought down
+- Rendezvous Hashing
+  - highest random weight hashing
+  - allows for minimal re-distribution of mappings when a server goes down
+- SHA
+  - Secure Hash Algorithms
+  - cryptographic hash functions used in the industry
+
+
+### Relational Databases
+- Relational Database
+  - data is stored following a tabular formt
+  - supports powerful. querying using SQL
+- Non-Relational Database
+  - free of imposed, tabular-like structure
+  - often referred to as NoSQL databases
+- SQL
+  - Structured Query Language
+  - though, not every relation database supports SQL
+- NoSQL database
+  - any database that is not SQL-compatible is called NoSQL
+- ACID Transaction
+  - Atomicity - transaction will either all succeed or all fail, no in-between state
+  - Consistency 
+    - transaction cannot bring the database to an invalid state
+    - after transaction is committed or rolled back, the rules for each record will still apply
+    - also named Strong Consistency
+  - Isolation - multiple transactions execution concurrently will have the same effect as if they had been executed sequentially
+  - Durability - Any committed transaction is written to no-volatile storage, will not be undown by a crash, power loss or network partition
+- Database Index
+  - allows db to perform certain queries much faster
+  - exist to reference structured data
+  - create an index on one or multiple columns in your database to greatly speed up read queries that you run very often, with downside of slightly longer writes to your database.
+- Strong Consistency
+  - consistency of ACID, opposed to Eventual Consistency
+- Eventual Consistency
+  - reads might return a view of the system that is stale
+  - guarantees that the state of the database will eventually reflect writes within a time period
