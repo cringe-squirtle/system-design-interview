@@ -105,3 +105,51 @@
   - guarantee given to a customer by a service provider
   - make guarantees on a system's availability, amongst other things
   - SLOs constitue an SLA
+### Caching
+- cache
+  - a piece of hardware of software that stores data, typically meant to retrieve that data faster than otherwise
+  - often used to store responses to network requests as well as results of computationlly-long operations
+  - data in a cache can become stale if the main source of truth for that data gets updated and the cache doesn't
+- cache hit
+  - when requested data is found in a cache
+- cache miss
+  - requested data could have been found in a cache but isn't
+  - used to refer to a negative consequence of a system failure or a poor design choice
+- cache eviction policy
+  - values get evicted or removed from a cache
+  - LRU - least-recently used
+  - FIFO
+  - LFU - least-frequently used
+- content delivery network
+  - CDN - acts like a cache for your servers
+  - web applications can be slow for users in a region if your servers located only in another region
+  - CDN has servers all around the world - latency be far better than your server
+  - PoPs - points of presence
+  - cloudflare
+  - google cloud CDN
+
+### Proxy
+- forward proxy
+  - server sits between a client and servers and acts on behalf of the client, typically used to mask the client's identity
+- Reverse Proxy
+  - server sits between a client and servers and acts on behalf of the server, typically used for logging, loading balance, or caching
+- Nginx
+  - popular webserver used as a reverse proxy and load balancer
+
+### Load Balancer
+- load balancer
+  - a type of reverse proxy
+  - distributes traffic across servers
+  - in many parts of a system, DNS layer, database layer, etc
+- Server Selection Strategy
+  - how load balancer chooses servers when distributing traffic amongst multiple servers
+  - strategies:
+    - round-robin
+    - random selection
+    - performance-based selection
+    - IP-based routing - to maximize caching usage, redirect some requests always to a cached server
+- Hot Spot
+  - workload might be spread unevenly
+  - can happen if sharding key or hashing function are suboptimal
+  - some servers receive a lot more traffic than others
+- Nginx
