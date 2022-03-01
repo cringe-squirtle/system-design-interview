@@ -233,3 +233,42 @@
   - have many subdivided rectangles represent densely populated areas
   - have few subdivided rectangles represent sparsely populated areas
   - find a location - extremely fast - runs in log4(x) 
+
+### Replication and Sharding
+- Replication
+  - duplicating the data from one database server to others
+  - increase the redundancy of your system
+  - tolerate reginal failures for instance
+  - also can move data closer to your clients to decrease the latency
+- Sharding - if database if huge, not capable of replication
+  - data partitioning
+  - splitting databse into two or more pieces
+  - increase the throughput of your datase 
+  - sharding based on client's region
+  - sharding based on type of data
+  - sharding based on the hash of a column
+- hot spot
+  - sharding or splitting across a set of servers, the workload might be spread unevenly
+  - can happen if your sharding key or hashing function are suboptimal or workload is naturally skewed
+  - some servers receive a lot more traffic than others
+
+### Leader Election
+- leader election
+  - nodes in a cluster elect to a leader amongst them
+  - responsible for the primary operations of the service that these nodes support
+  - guarantees that all nodes in the cluster know which one is the leader at any given time and can elect a new leader if leader dies for whatever reason
+- Consensus Algorithm
+  - agree on a single data value - e.g. who the leader is amongst a group of machines
+  - e.g. Paxos and Raft
+- Paxos and Raft  
+  - consensus algorithm
+  - allow for the synchronization of certain operations
+
+
+### Peer to Peer Network
+- peer to peer network
+  - collection of machines referred to as peers 
+  - divide a workload between themselves to presumably complete the workload faster than would otherwise be possible
+  - often used in file-distribution systems
+- Gossip protocol
+  - set of machines talk to each other in a uncoordinated manner in a clauster to spread information through a system without requiring a central source of data
