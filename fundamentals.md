@@ -272,3 +272,53 @@
   - often used in file-distribution systems
 - Gossip protocol
   - set of machines talk to each other in a uncoordinated manner in a clauster to spread information through a system without requiring a central source of data
+
+### Confirguration
+- a set of parameters or constants
+- written in json or yaml format
+- can be static, hard-coded
+- can be dynamic, lives outside of your system's application code
+
+### Rate Limiting
+- rate limiting
+  - limiting the number of requests sent to or from a system
+  - limit number of incoming requests in order to prevent Dos attacks
+  - can be enforced at the IP-address level, at the user-account level or at the region level
+- Dos Attack
+  - denial-of-service attack
+  - a malicious user tries to bring down or damage a system
+- DDos Attack
+  - distributed denial-of-service attack
+  - traffic flooding the target system comes from many different sources
+- Redis
+  - an in-memory key-value store, offer some persistent storage options but is typically used as a really fast, best-effort caching solution.  also used to implement rate limiting
+
+### Logging & Monitoring
+- Logging
+  - act of collecting and storing logs
+  - programs outpus log messages to STDOUT or STDERR pipes
+  - auto get aggregated into a centralized logging solution
+- Monitoring
+  - having visibility into a system's key metrics
+  - collecting important events in a system and aggregating them in human-readable charts
+- Alerting
+  - system administrators get notified when critical system issues occur
+  - can be set up by defining specific thresholds on monitoring charts
+
+### Publish/Subscribe Pattern
+- publish/subscrib pattern
+  - pub/sub
+  - consists of publishers and subscribers
+  - publishers publish messages to special topics without caring about or even knowing who will read those messages
+  - subscribers subscribe to topics and read messages coming through those topics
+  - come with very powerful guarantees like at-least-once delivery, persistent storage, ordering of messages, and replayability of messages
+- Idempotent Operation
+  - An operation that has the same ultimate outcome regardless of how many times its performed
+  - an operation performed multiple times without changing its overall effect
+  - pub/sub typically have to be idempotent since it tend to allow the same message to be consumed multiple times
+- Apache Kafka
+  - created by LinkedIn
+  - very usefull when using the streaming paradigm
+- Cloud Pub/Sub
+  - created by Google
+  - Guarantees at-least-once delivery of messages and supports rewinding in order to reprocess messages
