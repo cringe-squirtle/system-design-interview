@@ -322,3 +322,19 @@
 - Cloud Pub/Sub
   - created by Google
   - Guarantees at-least-once delivery of messages and supports rewinding in order to reprocess messages
+
+### MapReduce
+- MapReduce
+  - for processing very large datasets in a distributed setting efficiently
+  - 3 steps:
+    - map - runs a map function on various chuns of the dataset and transforms these chunks into intermediate key-value pairs
+    - shffle - reorganizes the intermediae ke-valye pairs, such that pairs of the same key are routed to the same machine in the final step
+    - reduce - runs a reduce function on the newly shuffled key-value pairs, transforms them into more meaningful data
+    - e.g. counting the number of occurrences of words in a large text file
+- Distributed File System
+  - is an abstraction over a cluster of machines that allows them to act like one large file system
+  - e.g. Google File System, Hadoop Distributed File System
+  - take care of classic availability and replication 
+  - guarantees that can be tricky to obtain in a distributed-system setting
+  - files are split into chunks of a certain size
+  - 
