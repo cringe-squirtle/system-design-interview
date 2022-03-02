@@ -337,4 +337,32 @@
   - take care of classic availability and replication 
   - guarantees that can be tricky to obtain in a distributed-system setting
   - files are split into chunks of a certain size
-  - 
+
+### Security and HTTPS
+- Man-In-The-Middle Attack
+  - attacker intercepts a line of communication that is thought to be private by its 2 communicating parties
+- Symmetric Encryption
+  - type of encryption that relies on only a single key to both encrypt and decrypt data.  The key must be known to all parties involved in communication and must therefore typically be shared between the parties at one point or another
+  - symmetric-key algorithm tend to be faster than their asymmetric counterparts
+  - popular symmetric-key algorithm: AES - advanced Encryption Standard
+- Asymmetric Encryption
+  - public-key encryption
+  - rely on 2 keys -- a public key and a private key -- to encrypt and decrypt data
+  - keys are generated using cryptographic algorithms with the public key
+  - can only be decrypted with the private key
+  - tend to be slower than their symmetric counterparts
+- HTTPS
+  - requires servers to have trucsted certificates (SSL)
+- TLS
+  - Transport Layer Security
+  - for HTTP in order to achieve secure communication online -- to be HTTPS
+- SSL Certificate
+  - digital certificate granted to a server by certificate authority
+  - crucial defense against man-in-the-middle attacks
+
+### API Design
+- Pagination
+  - the relevant API might be designed to return only a single page of response
+  - available for client to request the next page if desired
+- CRUD Operations
+  - Create Read Update Delete
