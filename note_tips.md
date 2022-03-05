@@ -12,3 +12,10 @@
   - socket related
 - caching
   - for frequent duplicated requests
+
+
+### Storage
+- static
+  - CDN
+- non-static
+  - SQL DB
