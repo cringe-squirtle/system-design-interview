@@ -22,7 +22,6 @@
     - subredditID:string, 
     - title: string
     - description: string
-    - votesCount: number 
   - create
     - input (Post)
       - userID:string, ACL
@@ -33,7 +32,8 @@
       - Post
   - get
     - input - postID, userID(ACL)
-    - output - Post
+    - output - Post 
+      - also get award 
   - Edit
     - input 
       - postID, 
@@ -53,7 +53,8 @@
       - pageSize?: ?number
       - pageStart?: ?number
     - output 
-      - List<Post>
+      - vote?
+      - List of Post
       - pageToken: ?number
 - comment
   - columns
@@ -61,9 +62,28 @@
     - creatorID: string
     - parentID: string
     - content: string
-    - voteID: number
     - isDeleted: boolean
+  - create - input userID, postID, content, parentID
+    - return Comment
+  - edit - similar to get post
+  - get - similar to get post
+  - delete - do soft delete since tree structure - similar to delete post
+  - List - similar to get post
+- vote
+  - column 
+    - voteID: string, 
+    - createID: string
+    - targetID: tring
+    - type: enum (up/ down)
   - create
-  
-  
-  
+    - if already created: delete
+    - else: create take Vote return Vote
+  - edit
+    - take voteID, userID, type
+    - return Vote
+  - delete
+    - take voteID, userID
+    - return Vote
+
+
+
