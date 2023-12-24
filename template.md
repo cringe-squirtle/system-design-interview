@@ -20,10 +20,11 @@
 - Basic algorithm
 - diagrams
 ### DEEP DIVE [15-20 min]
-- Scaling the algorithm
 - Scaling individual components: 
   - Availability, Consistency and Scale story for each component
   - Consistency and availability patterns
+- data availability - with built-in redundent storage and frequent backup - AWS RDS/Dynamono
+- replication - master slave on relational DB, multi-region for noSQL DB
 - Think about the following components, how they would fit in and how it would help
   - DNS
   - CDN [Push vs Pull]
