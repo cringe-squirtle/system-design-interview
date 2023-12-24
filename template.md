@@ -1,9 +1,6 @@
 ### FEATURE EXPECTATIONS [5 min]
-- Use cases
-- Scenarios that will not be covered
-- Who will use
-- How many will use
-- Usage patterns
+- Functional Requirements: Use cases
+- Non-functional Requirements: latency, data analysis, track status, etc.
 ### ESTIMATIONS [5 min]
 - Throughput (QPS for read and write queries)
 - Latency expected from the system (for read and write queries)
@@ -11,19 +8,16 @@
 - Traffic estimates
   - Write (QPS, Volume of data)
   - Read  (QPS, Volume of data)
-- Storage estimates
-- Memory estimates
-  - If we are using a cache, what is the kind of data we want to store in cache
-  - How much RAM and how many machines do we need for us to achieve this ?
-  - Amount of data you want to store in disk/ssd
+- Storage/memory estimates
+  - entitys - user, records, metadata, etc
+  - static - image, video, text, etc..
 ### DESIGN GOALS [5 min]
-- Latency and Throughput requirements
-- Consistency vs Availability  [Weak/strong/eventual => consistency | Failover/replication => availability]
+- CAP Theorem: Consistency vs Availability  [Weak/strong/eventual => consistency | Failover/replication => availability]
 ### HIGH LEVEL DESIGN [5-10 min]
 - APIs for Read/Write scenarios for crucial components
 - Database schema
 - Basic algorithm
-- High level design for Read/Write scenario
+- diagrams
 ### DEEP DIVE [15-20 min]
 - Scaling the algorithm
 - Scaling individual components: 
