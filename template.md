@@ -15,7 +15,7 @@
 - CAP Theorem: Consistency vs Availability  [Weak/strong/eventual => consistency | Failover/replication => availability]
 ### HIGH LEVEL DESIGN [5-10 min]
 - APIs for Read/Write scenarios for crucial components
-- Database choice: relational vs. noSQL vs. combined
+- Database choice: relational vs. noSQL vs. combined, ACID(consistency) vs BASE(availability)
 - Database schema
 - Basic algorithm
 - diagrams
