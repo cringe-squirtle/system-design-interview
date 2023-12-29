@@ -16,6 +16,7 @@
 ### HIGH LEVEL DESIGN [5-10 min]
 - APIs for Read/Write scenarios for crucial components
 - Database choice: relational vs. noSQL vs. combined, ACID(consistency) vs BASE(availability)
+- blob storage - video/image,
 - Database schema
 - Basic algorithm
 - diagrams
