@@ -12,14 +12,20 @@
   - entitys - user, records, metadata, etc
   - static - image, video, text, etc..
 ### DESIGN GOALS [5 min]
-- CAP Theorem: Consistency vs Availability  [Weak/strong/eventual => consistency | Failover/replication => availability]
+- CAP Theorem: Consistency vs Availability  
+  - partitioning - network failure
+  - availability - latency, peak usage
+  - consistency - data in transaction, likes, follows, etc..
 ### HIGH LEVEL DESIGN [5-10 min]
 - APIs for Read/Write scenarios for crucial components
 - Database choice: relational vs. noSQL vs. combined, ACID(consistency) vs BASE(availability)
+  - relational - relation, complex query, sharding-partitioning
+  - noSQL - speed, horizontal scaling, low consistency, unstrunctured data
 - blob storage - video/image,
 - Database schema
 - Basic algorithm
 - diagrams
+  - API gateway: authentication, security, rate limiting, throttling, transformations, analytics and monitoring
 ### DEEP DIVE [15-20 min]
 - Scaling individual components: 
   - Availability, Consistency and Scale story for each component
