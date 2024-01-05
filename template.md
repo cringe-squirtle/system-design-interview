@@ -28,6 +28,10 @@
 - diagrams
   - API gateway: authentication, security, rate limiting, throttling, transformations, analytics and monitoring
 ### DEEP DIVE [15-20 min]
+- focuses:
+  - instagram: pull vs push (follower amount), ranking service
+  - whatsapp: websocket (grouping)
+  - newsfeed: post generation steps & post publishing steps, ranking service
 - Scaling individual components: 
   - Availability, Consistency and Scale story for each component
   - Consistency and availability patterns
