@@ -23,6 +23,7 @@
   - noSQL - speed, horizontal scaling, low consistency, unstrunctured data
 - blob storage - video/image,
 - Database schema
+  - sharding for follower, friend, timeseries..
 - Basic algorithm
 - diagrams
   - API gateway: authentication, security, rate limiting, throttling, transformations, analytics and monitoring
