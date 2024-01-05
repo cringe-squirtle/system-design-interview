@@ -27,6 +27,11 @@
 - Basic algorithm
 - diagrams
   - API gateway: authentication, security, rate limiting, throttling, transformations, analytics and monitoring
+  - load balancer
+  - servers (for search (elastic search), auth, update, etc..
+  - CDN,
+  - pub-sub redis
+  - queue
 ### DEEP DIVE [15-20 min]
 - focuses:
   - instagram: pull vs push (follower amount), ranking service
