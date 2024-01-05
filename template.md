@@ -1,6 +1,6 @@
 ### FEATURE EXPECTATIONS [5 min]
 - Functional Requirements: Use cases
-- Non-functional Requirements: latency, data analysis, track status, etc.
+- Non-functional Requirements: latency, data analysis, track status, scale, etc.
 ### ESTIMATIONS [5 min]
 - Throughput (QPS for read and write queries)
 - Latency expected from the system (for read and write queries)
