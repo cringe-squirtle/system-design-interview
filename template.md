@@ -51,6 +51,16 @@
   - online judge:
     - contest(time stricted), submissions, problems, like comments, leaderboard
     - test processor - queue
+  - auction:
+    - search - elastic search
+    - item price update: real-time kafka queue cluster
+    - auction service:
+      - queued inputs - check incoming bid prices
+      - execute winner payment - expire after X min
+      - send success or fail into item-update service
+    - item-update: be purchased or failed, etc
+    - payment service
+    - inventory update service: put items active, re-activated, expired, canceled, etc...
 - Scaling individual components: 
   - Availability, Consistency and Scale story for each component
   - Consistency and availability patterns
