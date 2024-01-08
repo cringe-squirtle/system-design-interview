@@ -34,9 +34,23 @@
   - queue
 ### DEEP DIVE [15-20 min]
 - focuses:
-  - instagram: pull vs push (follower amount), ranking service
-  - whatsapp: websocket (grouping)
-  - newsfeed: post generation steps & post publishing steps, ranking service
+  - instagram:
+    - gen timeline: pull(many followerrs) vs push(few followerd), use hybrid
+    - ranking service, notification
+  - whatsapp:
+    - websocket : userA - socket - socketManager - socket - userB
+    - queueing  - kafka
+    - group service: fetches all user info from db/cache, deliever to each user's socket
+    - send message: put message into cache (if receiver offline)
+    - get message: get message from cache (when receiver comeback online) and delete after 30days
+    - upload / download files
+  - newsfeed:
+    - post generation steps, generates on request for inactive users & pre-generates for active users.  put into cache
+    - post publishing steps, fetches from cache then fan-out(pull push)
+    - ranking service - frequenty interacts, time spent, filter bad, past history.. db ranking score, relavent score
+  - online judge:
+    - contest(time stricted), submissions, problems, like comments, leaderboard
+    - test processor - queue
 - Scaling individual components: 
   - Availability, Consistency and Scale story for each component
   - Consistency and availability patterns
