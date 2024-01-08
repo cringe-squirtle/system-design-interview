@@ -34,6 +34,9 @@
   - queue
 ### DEEP DIVE [15-20 min]
 - focuses:
+  - URL shortener:
+    - encoder - base 62 - 23432423[ID] % 62=> ahrdS, 
+    - delete, expire, customize?
   - instagram:
     - gen timeline: pull(many followerrs) vs push(few followerd), use hybrid
     - ranking service, notification
