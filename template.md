@@ -64,6 +64,9 @@
     - item-update: be purchased or failed, etc
     - payment service
     - inventory update service: put items active, re-activated, expired, canceled, etc...
+  - privacy:
+    - each data be privacy controled: {user, key:gender, value:male, privacy_level:public}
+    - relationship for friends: {user:PersonB, connection: PersonA}, sharding by user, bidirectional
 - Scaling individual components: 
   - Availability, Consistency and Scale story for each component
   - Consistency and availability patterns
